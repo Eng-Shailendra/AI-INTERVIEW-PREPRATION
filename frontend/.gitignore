@@ -1,5 +1,17 @@
 # Logs
 .env
 node_modules
-
+dist
+build
+coverage
+*.log
+# OS files
+.DS_Store
+Thumbs.db
+# IDE files
+.vscode/
+.idea/
+# Ignore environment variables
+.env
+.env.local
 
