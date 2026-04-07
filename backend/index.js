@@ -12,11 +12,14 @@ import aiRoutes from "./routes/ai-route.js";
 
 let app = express();
 
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-  }),
-);
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://ai-interview-prepration-eta.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.use(express.urlencoded({ extended: true }));// this 
 app.use(express.json());
